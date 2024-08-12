@@ -1,10 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
-import Home from './components/Home'; // Placeholder, create later
-//import Favorites from './components/Favorites'; // Placeholder, create later
-//import Login from './components/Auth/Login'; // Placeholder, create later
-//import Signup from './components/Auth/Signup'; // Placeholder, create later
+import Home from './components/Home';
+import Favorites from './components/Favorites';
+import SignIn from './components/Auth/SignIn';
+import SignUp from './components/Auth/SignUp';
+import './styles.css';
 
 const App = () => {
   return (
@@ -12,9 +13,9 @@ const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/favorites" element={<Favorites />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} /> */}
+        <Route path="/favorites" element={<Favorites />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
       </Routes>
     </Router>
   );
