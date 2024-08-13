@@ -133,12 +133,13 @@ form button.calculate-btn:hover {
 }
 
 form button.clear-btn {
-    background-color: #dc3545; /* Red for clear action */
+    background-color: #FFC107; /* Warning color */
     color: white;
+    border: none;
 }
 
 form button.clear-btn:hover {
-    background-color: #c82333;
+    background-color: #FFA000; /* Darker shade of the warning color for hover */
     transform: translateY(-2px);
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow on hover */
 }
