@@ -12,7 +12,13 @@ body {
     line-height: 1.8; /* Slightly increased for better readability */
     padding: 20px;
 }
-
+.home {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.greeting {
+    margin: 20px 0;
+}
 /* Container */
 .container {
     max-width: 1200px;

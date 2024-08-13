@@ -72,8 +72,9 @@ const BMRCalculator = ({ onMealPlanGenerated }) => {
 
   return (
     <div className="bmr-calculator-container">
-      <h3>Calculate how many calories you need a day.</h3>
-      <form onSubmit={calculateBMR} className="bmr-form">
+      <form onSubmit={calculateBMR} className="bmr-form"> 
+         <legend>Calculate how many calories you need a day.</legend>
+
         <input
           type="number"
           placeholder="Height (cm)"

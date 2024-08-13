@@ -10,8 +10,8 @@ const Home = () => {
   };
 
   return (
-    <div>
-      <h1>Welcome to NutriFood</h1>
+    <div className='home'>
+      <h1 className='greeting'>Welcome to NutriFood</h1>
       <BMRCalculator onMealPlanGenerated={handleMealPlanGenerated} />
       <MealPlan mealPlan={mealPlan} />
     </div>
