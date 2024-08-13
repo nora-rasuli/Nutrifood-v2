@@ -1,18 +1,20 @@
 import React, { useState } from 'react';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../firebaseConfig';
+import { useNavigate } from 'react-router-dom';
 
 const SignIn = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   const handleSignIn = async (e) => {
     e.preventDefault();
     setError(null);
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      // Redirect or show success message
+      navigate('/'); // Redirect to Home page after successful sign-in
     } catch (err) {
       setError(err.message);
     }
@@ -36,7 +38,7 @@ const SignIn = () => {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-        <button type="submit">Sign In</button>
+        <button type="submit" className="auth-button sign-in-btn">Sign In</button>
       </form>
       {error && <p>{error}</p>}
     </div>

@@ -1,11 +1,11 @@
-// src/components/Header.js
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { auth } from '../firebaseConfig';
 
 const Header = () => {
   const [user, setUser] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -17,6 +17,7 @@ const Header = () => {
 
   const handleSignOut = async () => {
     await signOut(auth);
+    navigate('/signin'); // Redirect to Sign-In page after sign out
   };
 
   return (

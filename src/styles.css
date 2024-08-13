@@ -235,6 +235,7 @@ form button.clear-btn:hover {
 
 .favorites h2 {
     margin-bottom: 30px;
+    margin-top: 20px;
     font-size: 2rem;
     color: #333;
 }
@@ -255,6 +256,39 @@ form button.clear-btn:hover {
 .favorites .mealplan button:hover {
     background: #c82333;
     transform: translateY(-2px);
+}
+/* Sign-In and Sign-Up Button Styles */
+.auth-button {
+    width: 180px; /* Fixed width for consistency */
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    border: none;
+    text-align: center; /* Ensure text is centered */
+}
+
+.auth-button.sign-in-btn {
+    background-color: #28a745; /* Green for Sign-In */
+    color: white;
+}
+
+.auth-button.sign-in-btn:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.auth-button.sign-up-btn {
+    background-color: #007bff; /* Blue for Sign-Up */
+    color: white;
+}
+
+.auth-button.sign-up-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Responsive Design */
