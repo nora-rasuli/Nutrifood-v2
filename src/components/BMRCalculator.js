@@ -71,9 +71,9 @@ const BMRCalculator = ({ onMealPlanGenerated }) => {
   };
 
   return (
-    <div>
+    <div className="bmr-calculator-container">
       <h3>Calculate how many calories you need a day.</h3>
-      <form onSubmit={calculateBMR}>
+      <form onSubmit={calculateBMR} className="bmr-form">
         <input
           type="number"
           placeholder="Height (cm)"
@@ -114,8 +114,10 @@ const BMRCalculator = ({ onMealPlanGenerated }) => {
           <option value="1">Maintain Weight</option>
           <option value="1.05">Gain Weight</option>
         </select>
-        <button type="submit">Calculate</button>
-        <button type="button" onClick={clearForm}>Clear</button>
+        <div className="bmr-buttons">
+          <button type="submit" className="calculate-btn">Calculate</button>
+          <button type="button" onClick={clearForm} className="clear-btn">Clear</button>
+        </div>
       </form>
       {bmr && <h4>Your BMR is {bmr.toFixed(2)} calories/day.</h4>}
     </div>
