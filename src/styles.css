@@ -245,6 +245,7 @@ form button.clear-btn:hover {
 
 .favorites .mealplan button {
     background: #dc3545;
+    margin-top: 10px;
     padding: 10px 15px;
     color: white;
     border-radius: 8px;
